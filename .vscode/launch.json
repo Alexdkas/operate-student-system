@@ -2,10 +2,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Run C++",
+            "name": "Run project",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/app",
+            "program": "${workspaceFolder}/main",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -21,7 +21,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "Build C++"
+            "preLaunchTask": "Build project"
         }
     ]
 }
