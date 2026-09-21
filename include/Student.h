@@ -1,6 +1,9 @@
 #pragma once
 
 #include <string>
+#include <vector>
+
+#include "Grade.h"
 
 class Student
 {
@@ -19,6 +22,7 @@ public:
     std::string getSurname() const { return surname; }
     std::string getEmail() const { return email; }
     std::string getGroup() const { return group; }
+    std::vector<Grade> getGrades() const;
 
     std::string FileString() const
     {

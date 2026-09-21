@@ -1,11 +1,18 @@
 #include "FileMandger.h"
 
 #include "AdminUser.h"
+#include "Student.h"
 #include "StudentUser.h"
 #include "TeacherUser.h"
 
 #include <fstream>
 #include <sstream>
+
+FileManager &FileManager::getInstance()
+{
+    static FileManager instance;
+    return instance;
+}
 
 namespace
 {
@@ -364,4 +371,36 @@ std::shared_ptr<User> FileManager::authenticateUser(const std::string &username,
     }
 
     return nullptr;
+}
+
+std::vector<Student> FileManager::getStudentsByID(int studentID) const
+{
+    std::vector<Student> students = loadStudents();
+    std::vector<Student> filtered;
+
+    for (const auto &student : students)
+    {
+        if (student.getStudentID() == studentID)
+        {
+            filtered.push_back(student);
+        }
+    }
+
+    return filtered;
+}
+
+std::vector<Grade> FileManager::getGradesForStudent(int studentID) const
+{
+    std::vector<Grade> grades = loadGrades();
+    std::vector<Grade> filtered;
+
+    for (const auto &grade : grades)
+    {
+        if (grade.getStudentID() == studentID)
+        {
+            filtered.push_back(grade);
+        }
+    }
+
+    return filtered;
 }

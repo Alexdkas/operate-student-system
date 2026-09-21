@@ -4,13 +4,10 @@
         {
             "label": "Build project",
             "type": "shell",
-            "command": "g++",
+            "command": "bash",
             "args": [
-                "-std=c++17",
-                "-g",
-                "*.cpp",
-                "-o",
-                "${workspaceFolder}/main"
+                "-lc",
+                "mkdir -p \"${workspaceFolder}/bin\" && g++ -std=c++17 -g \"${workspaceFolder}/src\"/*.cpp -I\"${workspaceFolder}/include\" -o \"${workspaceFolder}/bin/main\""
             ],
             "options": {
                 "cwd": "${workspaceFolder}"

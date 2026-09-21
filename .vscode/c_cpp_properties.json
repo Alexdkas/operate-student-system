@@ -4,7 +4,8 @@
             "name": "C++",
             "compilerPath": "/usr/bin/g++",
             "includePath": [
-                "${workspaceFolder}/**",
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/src",
                 "/usr/include",
                 "/usr/include/c++/**"
             ],

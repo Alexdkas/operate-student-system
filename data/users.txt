@@ -1,0 +1,7 @@
+0,student_user,hashed_password,Student,0
+0,student_user,hashed_password,Student,0
+2,student1,fnv1a_2987581e1e787950,Student,2
+3,admin2,fnv1a_c3052ab5d195c3fb,Admin,3
+4,admin,fnv1a_eea96ab5ea65bb0c,Admin,4
+5,Alex,fnv1a_456fc2181822c4db,Student,5
+6,Hui,fnv1a_456fc2181822c4db,Teacher,6

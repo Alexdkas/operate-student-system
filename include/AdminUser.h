@@ -14,6 +14,7 @@ public:
         : User(id, username, hashedPassword, UserType::Admin), RecordID(recordID) {}
 
     void displaymenu() const override;
+    void addUser(const User &user);
     void addUser(const std::string &username, const std::string &hashedPassword, UserType userType); // Function to add a new user
     void removeUser(int userId);                                                                     // Function to remove a user by their ID
     void viewAllUsers() const;                                                                       // Function to view all users in the system
